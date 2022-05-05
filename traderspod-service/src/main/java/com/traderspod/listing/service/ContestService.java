@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.traderspod.listing.domain.Contest;
-import com.traderspod.listing.dto.ContestResponse;
+import com.traderspod.listing.dto.input.ContestRequest;
+import com.traderspod.listing.dto.output.ContestResponse;
 import com.traderspod.listing.mapping.ContestMapper;
 import com.traderspod.listing.repository.ContestRepository;
 import com.traderspod.listing.util.DateTimeUtil;
@@ -43,12 +44,17 @@ public class ContestService {
 		ContestResponse contestResponse = contestMapper.contestToContestResponse(contest.get());
 		return contestResponse;
 	}
-	public List<Contest> createContest(Contest contest) {
+	public ContestResponse createContest(ContestRequest contestRequest) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public List<Contest> updateContest(Contest contest) {
+	public Integer updateContest(Integer contestId, ContestRequest contestRequest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean deleteContest(Integer contestId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

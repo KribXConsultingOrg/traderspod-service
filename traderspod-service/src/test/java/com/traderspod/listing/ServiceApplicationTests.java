@@ -2,16 +2,18 @@ package com.traderspod.listing;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.ContextConfiguration;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
-@AutoConfigureMockMvc
+//@RunWith(SpringJUnit4ClassRunner.class)
+
+@ExtendWith(MockitoExtension.class)
+//@SpringBootTest
+//@AutoConfigureMockMvc
+@ContextConfiguration(classes = { TestConfig.class })
 @ActiveProfiles("test")
-class ServiceApplicationTests {
+public class ServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

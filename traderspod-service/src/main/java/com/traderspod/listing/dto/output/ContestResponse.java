@@ -1,4 +1,4 @@
-package com.traderspod.listing.dto;
+package com.traderspod.listing.dto.output;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
